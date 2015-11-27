@@ -39,3 +39,7 @@ Complete implementation of JSR-94 approach would have ended up with replacing th
 
 I am not claiming using the JSR-94 is impossible or impractical but I would love to hear about its outstanding adoption.
 
+## Update
+Few comments from [reddit](https://www.reddit.com/r/java/comments/3r49ya/traps_for_java_rule_engine/) on the subject.
+
+
