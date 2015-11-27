@@ -39,3 +39,8 @@ Complete implementation of JSR-94 approach would have ended up with replacing th
 
 I am not claiming using the JSR-94 is impossible or impractical but I would love to hear about its outstanding adoption.
 
+```javascript
+if (isAwesome){
+  return true
+}
+```
