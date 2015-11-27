@@ -42,9 +42,3 @@ I am not claiming using the JSR-94 is impossible or impractical but I would love
 ## Update
 Few comments from [reddit](https://www.reddit.com/r/java/comments/3r49ya/traps_for_java_rule_engine/) on the subject.
 
-```java
-class Test {
-  private X x;
-  public void run(Y y) {...}
-}
-```
