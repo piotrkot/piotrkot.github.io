@@ -14,7 +14,7 @@ I can almost hear that hesitation in your voice.
 And why is that? We know the definitions and practices. How come it does not work out?
 
 ### The devil is in the details
-Let's look from the historical angle to the times of Simula 67 and Smalltalk. Initiative for creation of Object-Oriented thinking was idea of objects and messages as the basis for computation. There were solid requirements to carefully design, assign responsibilities, and define collaborators. However, perhaps due to business urge in delivering value, rejection of software art, and need for structured, processed, and manufactured software it led to data abstraction and modular programming, instead. Eventually, became Procedural Object-Oriented Programming (POOP) :smiley:
+Let's look from the historical angle to the times of Simula 67 and Smalltalk. Initiative for creation of Object-Oriented thinking was idea of objects and messages as the basis for computation. There were solid requirements to carefully design, assign responsibilities, and define collaborators. However, perhaps due to business urge in delivering value, rejection of software art, and need for structured, processed, and manufactured software it led to data abstraction and modular programming, instead. Eventually, became Procedural Object-Oriented Programming (POOP)
 
 You might think you are still doing it right.
 
