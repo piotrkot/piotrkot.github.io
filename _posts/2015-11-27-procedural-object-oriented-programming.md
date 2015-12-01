@@ -65,7 +65,7 @@ Unfortunately, this is very common scenario. Code gets implemented and changed w
 
 Added abstractions are based on code similarities and not objects and responsibilities - `fetch` & `add` methods could be shared at some point, though they are completely different. Programmers will identify other technical (not business) decompositions and code reuses like automated talking to different objects. They will make a singleton which stores all objects and can serve on request. Don't you think it is possible? And what Dependency Injection Container is doing?
 
-Further can be required to support very dirty clothes. So dirty that for safety reasons one needs to wear gloves and helmet. As the clothes can have two forms some data oriented programmers will discover yet another singleton that converts those dirty clothes to the ones safely carried and back. Don't you think it is possible? And what Object-Relational Mapping is doing?
+Further can be required to support very dirty clothes. So dirty that for safety reasons one needs to wear full bomb suit with gloves. As the clothes can have two forms some data oriented programmers will discover yet another singleton that converts those dirty clothes to the ones safely carried and back. Don't you think it is possible? And what Object-Relational Mapping is doing?
 
 Singletons and utility methods already crept in. As it is getting complicated there might be a proposal of layers for separation, like `Room` data layer, `House` service layer, `Shop` service layer. Eventually all gets technically structured and data oriented with maintenance hell.
 
