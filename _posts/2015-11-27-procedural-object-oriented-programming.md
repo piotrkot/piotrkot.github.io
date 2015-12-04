@@ -37,7 +37,8 @@ get WashingMachine().add(dirtyClothes);
 get WashingMachine().add(washingPowder);
 // assume it's an old-fashioned machine, without programs
 get WashingMachine().set(temperature, spinning, waterAmount);
-// as wife knows it all, better check with her
+// wife simply knows the special treatment and figures out
+// when tag is missing, better check with her
 get WashingMachine().validateValues(Wife.knowledge());
 get WashingMachine().doLaundry();
 ```
@@ -75,7 +76,7 @@ With object-orientation in mind, all starts from thinking of the classes, their 
 Our script could be as simple as following.
 
 ```java
-wife.doLaundry(Type(color, material))
+wife.doLaundry(DARK_JEANS)
 ```
 
 In fact we should rather very politely ask. Indeed, since she knows it better we can suggest her to carry that responsibility (a bouquet of flowers once a while helps here).
@@ -84,7 +85,7 @@ With loose coupling between `House`, `Bathroom`, `WashingMashine` and knowing th
 
 
 ```java
-public void doLaundry(Type type) {
+public void doLaundry(WashType type) {
   clothes = house.get(Bathroom).clothesBy(type);
   house.get(Bathroom).get(WashingMachine)
     .new WashingProgram(type).doLaundry(clothes);
@@ -111,7 +112,7 @@ Now, the OOP pseudo-code altogether.
 ```java
 class Application {
   public static void main() {
-    wife.doLaundry(Type(color, material));
+    wife.doLaundry(DARK_JEANS);
     background.execute(
       new Runnable() {
         public void run() {
@@ -131,7 +132,7 @@ class Application {
 ```java
 class Wife {
   private House house;
-  public void doLaundry(Type type) {
+  public void doLaundry(WashType type) {
     clothes = house.get(Bathroom).clothesBy(type);
     house.get(Bathroom).get(WashingMachine)
       .new WashingProgram(type).doLaundry(clothes);
@@ -156,7 +157,7 @@ class House {
 
 class Bathroom {
   private Iterable<Wear> clothes;
-  public Iterable<Wear> clothesBy(Type type) {...}
+  public Iterable<Wear> clothesBy(WashType type) {...}
   public add(Iterable<Wear> clothes) {...}
 }
 
@@ -166,7 +167,11 @@ class WashingMachine {
   }
 }
 
-enum Type {
+enum WashType {
+  WHITE_BABY_CLOTHES,
+  LIGHT_TOWELS,
+  DARK_JEANS,
+  ...;
   private Color color;
   private Material material;
   public temperature() {...}
